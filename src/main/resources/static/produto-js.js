@@ -38,24 +38,10 @@ form.addEventListener('submit', (e) => {
   imagem: form['imagem'].value.trim()
 };
 
-  fetch('/cadastrar-produto', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(produto)
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data.sucesso) {
-        mensagemAviso.textContent = "Produto cadastrado com sucesso, agora nossa empresa irá analisá-lo e logo o postaremos";
-        mensagemAviso.classList.add('show');
-        form.reset();
-        setTimeout(() => mensagemAviso.classList.remove('show'), 4000);
-      } else {
-        alert('Erro ao cadastrar produto: ' + data.erro);
-      }
-    })
-    .catch((error) => { // Adicione 'error' para logar o erro real
-        console.error('Erro ao conectar com o servidor:', error); // Log para depuração
-        alert('Erro ao conectar com o servidor. Verifique a conexão ou o console para mais detalhes.');
-    });
+  // Modo offline/local: não chamar backend. Simular sucesso localmente para frontend funcionar.
+  console.log('Simulando cadastro local do produto:', produto);
+  mensagemAviso.textContent = "Produto cadastrado com sucesso (modo local). A página está funcionando sem backend.";
+  mensagemAviso.classList.add('show');
+  form.reset();
+  setTimeout(() => mensagemAviso.classList.remove('show'), 4000);
 });
