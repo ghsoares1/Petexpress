@@ -1,16 +1,25 @@
-function validateForm() {
-  var email = document.getElementById("email").value;
-  var senha = document.getElementById("senha").value;
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('login-form');
+  if (!form) return;
 
-  if (email.trim() === "") {
-    alert("Por favor, insira seu e-mail.");
-    return false;
-  }
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-  if (senha.trim() === "") {
-    alert("Por favor, insira sua senha.");
-    return false;
-  }
+    const email = document.getElementById('email').value || '';
+    const senha = document.getElementById('senha').value || '';
 
-  return true;
-}
+    if (email.trim() === '') {
+      alert('Por favor, insira seu e-mail.');
+      return;
+    }
+
+    if (senha.trim() === '') {
+      alert('Por favor, insira sua senha.');
+      return;
+    }
+
+    // Atualmente não existe endpoint de autenticação público no backend.
+    // Redirecionamos para a página inicial localmente após validação.
+    window.location.href = 'index.html';
+  });
+});
