@@ -19,9 +19,9 @@
     <description>Backend para o sistema PetExpress</description>
 
     <properties>
-        <java.version>21</java.version>
-        <!-- Ensure maven-compiler-plugin targets Java 21 -->
-        <maven.compiler.release>21</maven.compiler.release>
+        <!-- Temporarily target Java 17 to allow local builds without JDK 21 installed -->
+        <java.version>17</java.version>
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
 
     <dependencies>
