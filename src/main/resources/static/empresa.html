@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PetExpress - Empresa</title>
+  <link rel="stylesheet" href="style-index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <img src="img/lg.png" alt="Logo PetExpress" class="logo">
+    <div class="busca">
+      <form id="form-busca" autocomplete="off">
+        <div id="box-busca-container">
+          <div id="box-busca">
+            <input type="text" id="busca" placeholder="Buscar produtos, rações, acessórios..." />
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </div>
+          <ul id="sugestoes-busca"></ul>
+        </div>
+      </form>
+    </div>
+
+    <div class="icones">
+      <a href="login.html"><i class="fas fa-user"></i><span>Conta</span></a>
+      <a href="carrinho.html"><i class="fas fa-shopping-cart"></i><span>Carrinho</span></a>
+      <a href="produto.html" class="area-empresa-link"><i class="fas fa-store"></i><span>Empresa</span></a>
+    </div>
+  </header>
+
+  <nav class="menu-centro">
+    <button onclick="window.location.href='gatos.html'"><i class="fas fa-cat"></i> Gatos</button>
+    <button onclick="window.location.href='caes.html'"><i class="fas fa-dog"></i> Cães</button>
+  </nav>
+
+  <main class="container">
+    <h1>Sobre a PetExpress</h1>
+    <p>Somos uma loja virtual dedicada a produtos para pets. Nosso objetivo é oferecer qualidade, preço justo e entrega rápida.</p>
+
+    <h2>Nossa missão</h2>
+    <p>Proporcionar bem-estar e cuidado aos animais de estimação com produtos selecionados e atendimento dedicado.</p>
+
+    <h2>Contato</h2>
+    <p>Tem dúvidas? Acesse a página de contato.</p>
+    <p><a href="contato.html">Ir para contato</a></p>
+  </main>
+
+</body>
+</html>
