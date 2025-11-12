@@ -1,0 +1,201 @@
+:root {
+    --primary:  #ff9800;
+    --background: #F9F9F9;
+    --card: rgba(255,255,255,0.85);
+    --text: #45413E;
+    --accent: #F4CFC6;
+    --neon: #ffb347;
+    --shadow: 0 8px 32px 0 rgba(219,127,103,0.10);
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #F9F9F9 60%, #ffe5d0 100%);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--primary);
+    color: #fff;
+    padding: 24px 0;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(219,127,103,0.08);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+}
+
+.cart {
+    background: var(--card);
+    border-radius: 18px;
+    box-shadow: var(--shadow), 0 1.5px 30px 0 #ffe5d0;
+    padding: 32px 24px;
+    margin: 40px 0;
+    width: 380px;
+    backdrop-filter: blur(8px) saturate(180%);
+    border: 1.5px solid rgba(219,127,103,0.15);
+    animation: fadeIn 1.2s cubic-bezier(.39,.575,.56,1) both;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(40px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+.cart h2 {
+    margin-bottom: 24px;
+    font-size: 1.6em;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 6px #ffe5d0;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background: rgba(255,255,255,0.65);
+    box-shadow: 0 1px 8px 0 rgba(219,127,103,0.04);
+    cursor: pointer;
+}
+.cart-item:hover {
+    box-shadow: 0 4px 24px 0 var(--accent), 0 0 0 2px var(--primary);
+    transform: scale(1.025) translateY(-2px);
+    background: rgba(255,255,255,0.85);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--accent);
+    background: #fafafa;
+    box-shadow: 0 2px 8px 0 #ffe5d0;
+    transition: border 0.2s;
+}
+.cart-item:hover img {
+    border: 2px solid var(--primary);
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.item-name {
+    font-weight: 500;
+    font-size: 1.08em;
+    letter-spacing: 0.2px;
+}
+
+.item-price {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 0 18px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #c96b4b;
+    text-shadow: 0 1px 6px #ffe5d0;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 14px 0;
+    background: #fff;
+    color: var(--primary);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.12em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 16px 0 var(--accent), 0 0 8px 2px var(--neon);
+    transition: background 0.2s, color 0.2s, box-shadow 0.3s;
+    outline: none;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+.checkout-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, #ffe5d0 0%, var(--primary) 100%);
+    transform: skewX(-20deg);
+    transition: left 0.3s;
+    z-index: 0;
+    opacity: 0.6;
+}
+.checkout-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 32px 0 var(--primary), 0 0 16px 2px var(--neon);
+}
+.checkout-btn:hover::before {
+    left: 100%;
+}
+
+@media (max-width: 500px) {
+    .cart {
+        width: 98vw;
+        padding: 20px 4vw;
+        margin: 20px 0;
+    }
+    .cart-item img {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+
+.logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px 0 #ffe5d0;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0 auto;
+    display: block;
+}
+header a {
+    display: inline-block;
+    text-align: center;
+}
+.logo:hover {
+    transform: scale(1.08) rotate(-4deg);
+    box-shadow: 0 4px 24px 0 #ff9800;
+}
+

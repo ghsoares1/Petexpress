@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PetExpress</title>
+  <link rel="stylesheet" href="style-index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <img src="img/lg.png" alt="Logo PetExpress" class="logo">
+  <div class="busca">
+  <form id="form-busca" autocomplete="off">
+    <div id="box-busca-container">
+      <div id="box-busca">
+        <input type="text" id="busca" placeholder="Buscar produtos, rações, acessórios..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+      <ul id="sugestoes-busca"></ul>
+    </div>
+  </form>
+</div>
+
+
+    <div class="icones">
+      <a href="login.html"><i class="fas fa-user"></i><span>Conta</span></a>
+      <a href="carrinho.html"><i class="fas fa-shopping-cart"></i><span>Carrinho</span></a>
+      <a href="produto.html" class="area-empresa-link"><i class="fas fa-store"></i><span>Empresa</span></a>
+    </div>
+  </header>
+
+  <nav class="menu-centro">
+    <button onclick="window.location.href='gatos.html'"><i class="fas fa-cat"></i> Gatos</button>
+    <button onclick="window.location.href='caes.html'"><i class="fas fa-dog"></i> Cães</button>
+  </nav>
+
+  <section class="destaque">
+    <h2>Produtos em Destaque</h2>
+    <div class="carrossel-container">
+      <div class="carrossel" id="carrossel">
+
+        <div class="card" onclick="window.location.href='gatos.html'">
+          <img src="img/c1.jpg" alt="Whiskas Adulto Carne">
+          <div class="info">
+            <h3>Whiskas Adulto Carne</h3>
+            <p>R$ 29,90</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='gatos.html'">
+          <img src="img/c2.jpg" alt="Golden Gatos Castrados">
+          <div class="info">
+            <h3>Golden Gatos Castrados</h3>
+            <p>R$ 64,90</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='gatos.html'">
+          <img src="img/c3.jpg" alt="Premier Gatos Filhotes Frango">
+          <div class="info">
+            <h3>Premier Gatos Filhotes Frango</h3>
+            <p>R$ 89,90</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='gatos.html'">
+          <img src="img/c4.jpg" alt="GranPlus Gatos Adultos Carne & Arroz">
+          <div class="info">
+            <h3>GranPlus Gatos Adultos Carne & Arroz</h3>
+            <p>R$ 72,50</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='gatos.html'">
+          <img src="img/c5.jpg" alt="Cat Chow Naturalis Frango">
+          <div class="info">
+            <h3>Cat Chow Naturalis Frango</h3>
+            <p>R$ 55,90</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='gatos.html'">
+          <img src="img/c6.jpg" alt="Special Cat Prime Salmão">
+          <div class="info">
+            <h3>Special Cat Prime Salmão</h3>
+            <p>R$ 59,90</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='caes.html'">
+          <img src="img/1.jpg" alt="Premier Pet Formula Adultos Porte Grande">
+          <div class="info">
+            <h3>Premier Pet Formula Adultos Porte Grande</h3>
+            <p>R$ 179,90</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='caes.html'">
+          <img src="img/2.jpg" alt="Golden Mega Adultos Raças Grandes">
+          <div class="info">
+            <h3>Golden Mega Adultos Raças Grandes</h3>
+            <p>R$ 161,99</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='caes.html'">
+          <img src="img/3.jpg" alt="Golden Mega Filhotes Porte Grande">
+          <div class="info">
+            <h3>Golden Mega Filhotes Porte Grande</h3>
+            <p>R$ 161,91</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='caes.html'">
+          <img src="img/4.png" alt="Premier Pet Formula Adultos Porte Pequeno">
+          <div class="info">
+            <h3>Premier Pet Formula Adultos Porte Pequeno</h3>
+            <p>R$ 67,90</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='caes.html'">
+          <img src="img/5.jpg" alt="Golden Mini Bits Adultos Pequeno Porte">
+          <div class="info">
+            <h3>Golden Mini Bits Adultos Pequeno Porte</h3>
+            <p>R$ 65,99</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='caes.html'">
+          <img src="img/6.jpg" alt="Golden Filhotes Pequeno Porte">
+          <div class="info">
+            <h3>Golden Filhotes Pequeno Porte</h3>
+            <p>R$ 72,90</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="cadastro-novidades">
+    <div class="texto-cadastro">
+      <label>Cadastre-se e receba nossas promoções e novidades antes de todo mundo.</label>
+    </div>
+    <div class="form-cadastro">
+      <input type="email" placeholder="Seu e-mail" />
+      <input type="text" placeholder="Seu nome" />
+      <button>Cadastrar</button>
+    </div>
+  </div>
+
+  <footer class="footer-links">
+    <div>
+      <h4>Institucional</h4>
+      <ul>
+        <li>Sobre a PetExpress</li>
+        <li>Trabalhe com a gente</li>
+        <li>Canal de Ética</li>
+        <li>Área do Investidor</li>
+        <li>Portal PetExpress</li>
+        <li>Novas Unidades</li>
+        <li>Mapa do Site</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Aqui Você Encontra</h4>
+      <ul>
+        <li>Assinatura PetExpress</li>
+        <li>Retirada rápida na loja</li>
+        <li>Compare e Compre</li>
+        <li>Vantagens Exclusivas</li>
+        <li>Clube PetExpress</li>
+        <li>Guia de Compras</li>
+        <li>PetCommerce</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Nossas Políticas</h4>
+      <ul>
+        <li>Política de Entregas</li>
+        <li>Formas de Pagamento</li>
+        <li>Trocas e Garantias</li>
+        <li>Descontos e Promoções</li>
+        <li>Privacidade e Segurança</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Ajuda</h4>
+      <ul>
+        <li>Fale Conosco</li>
+        <li>Meus Pedidos</li>
+        <li>Minha Conta</li>
+        <li>Minhas Assinaturas</li>
+        <li>Canal de Ouvidoria</li>
+      </ul>
+
+    </div>
+
+    <div class="box-app">
+      <p><strong>Baixe o Nosso App</strong></p>
+      <img src="img/qrcode.png" alt="QR code" style="width: 90px;">
+      <div style="margin-top: 10px;">
+        <img src="img/appstore.png" alt="App Store" style="width: 100px; margin-bottom: 6px;">
+        <img src="img/googleplay.png" alt="Google Play" style="width: 100px;">
+      </div>
+    </div>
+    
+  </footer>
+  
+ <script src="index-js.js"></script>
+
+</body>
+</html>

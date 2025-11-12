@@ -1,0 +1,147 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('C:/Users/luigi/Documents/petexpress/img/bg.png'); /* Imagem do lado esquerdo */
+    background-repeat: no-repeat;
+    background-position: left center; /* Posiciona a imagem no lado esquerdo */
+    background-size: auto 100%; /* Ajuste o tamanho do background */
+}
+
+/* Container do formulário */
+.form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(255, 145, 0, 0.3);
+    width: 100%;
+    max-width: 420px;
+    animation: fadeIn 0.6s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Resto do código permanece igual... */
+
+/* Título */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff7700;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffa94d;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #ff7700;
+    outline: none;
+    box-shadow: 0 0 5px #ff7700;
+}
+
+/* Botão */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff7700;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background-color: #e56600;
+}
+
+/* Link de troca */
+.switch-form {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #666;
+}
+
+.switch-form a {
+    color: #ff7700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Esqueci minha senha */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 18px;
+}
+
+.forgot-password a {
+    font-size: 14px;
+    color: #ff7700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .form-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .form-container h2 {
+        font-size: 24px;
+    }
+}
